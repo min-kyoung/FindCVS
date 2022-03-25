@@ -48,6 +48,9 @@
 		A95546A827EDFD5200B202AD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A95546A727EDFD5200B202AD /* libc++.tbd */; };
 		A95546AA27EDFD5F00B202AD /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A95546A927EDFD5F00B202AD /* libxml2.tbd */; };
 		A95546AC27EDFD6E00B202AD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A95546AB27EDFD6E00B202AD /* libsqlite3.tbd */; };
+		A95546AE27EE016F00B202AD /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546AD27EE016F00B202AD /* LocationData.swift */; };
+		A95546B127EE01C100B202AD /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546B027EE01C100B202AD /* KLDocument.swift */; };
+		A95546B327EE054D00B202AD /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546B227EE054D00B202AD /* DetailListCellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,9 @@
 		A95546A727EDFD5200B202AD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		A95546A927EDFD5F00B202AD /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		A95546AB27EDFD6E00B202AD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A95546AD27EE016F00B202AD /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		A95546B027EE01C100B202AD /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
+		A95546B227EE054D00B202AD /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 				A955464227EDED2900B202AD /* AppDelegate.swift */,
 				A955464427EDED2900B202AD /* SceneDelegate.swift */,
 				A955464627EDED2900B202AD /* ViewController.swift */,
+				A95546AF27EE017B00B202AD /* Entities */,
 				A955464827EDED2900B202AD /* Main.storyboard */,
 				A955464B27EDED2B00B202AD /* Assets.xcassets */,
 				A955464D27EDED2B00B202AD /* LaunchScreen.storyboard */,
@@ -228,6 +235,16 @@
 				A955467527EDFCFB00B202AD /* MTMapCircle.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		A95546AF27EE017B00B202AD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A95546AD27EE016F00B202AD /* LocationData.swift */,
+				A95546B027EE01C100B202AD /* KLDocument.swift */,
+				A95546B227EE054D00B202AD /* DetailListCellData.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95546AE27EE016F00B202AD /* LocationData.swift in Sources */,
+				A95546B127EE01C100B202AD /* KLDocument.swift in Sources */,
 				A955464727EDED2900B202AD /* ViewController.swift in Sources */,
 				A955464327EDED2900B202AD /* AppDelegate.swift in Sources */,
+				A95546B327EE054D00B202AD /* DetailListCellData.swift in Sources */,
 				A955464527EDED2900B202AD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
