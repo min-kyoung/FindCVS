@@ -8,7 +8,9 @@
 * Kakao API를 사용하기 위해 **https://developers.kakao.com** 에 로그인을 한다.
   * **내 애플리케이션**을 추가한다.
   * **문서 > 지도/로컬 API 가이드 > iOS > Guide**에서 SDK를 다운받는다.
-  <br> <img src="https://user-images.githubusercontent.com/62936197/160227094-5c1f8d86-ebc4-4051-8251-2d0e96376fc2.png" width="450" height="170"> 　
+    * 다운받은 SDK는 압축을 풀어 해당 프로젝트가 있는 폴더로 옮기고, XCode를 열어 Frameworks에 추가헤준다.
+  <br> <img src="https://user-images.githubusercontent.com/62936197/160227094-5c1f8d86-ebc4-4051-8251-2d0e96376fc2.png" width="450" height="170"> 
+   
 * Kakao Map API 연결 
   * 번들 ID와 일치하는 앱에서만 지도 API를 사용할 수 있도록 네이티브엡키를 info.plist에 추가
   <br> <img src="https://user-images.githubusercontent.com/62936197/160227110-2c7b7322-83d5-465c-a7b3-d9ede433966f.png" width="550" height="30"> 　
@@ -26,3 +28,5 @@
 * 사용자의 위치는 개인적인 정보이므로 앱에서 위치관련 이벤트를 활용하기 위해서는 사용자의 허락이 필요하다. 
 * CLLocationManager는 앱에 대한 위치 관련 이벤트 전달을 시작하거나 중지하는데 사용하는 객체이다. 
 * 앱에 위치 서비스를 추가하려면 CLLocationManager를 사용해서 Delegate를 구현하고 앱에 필요한 위치 정보에 엑세스할 수 있는 권한을 부여할지 여부를 결정하면 된다.
+* CLLocation과 같이 현재 위치를 사용하는 경우에는 시뮬레이터에서 정상적인 테스트가 어렵다. <br>
+  시뮬레이터에서는 자신의 현재 위치를 제대로 받아올 수 없기 때문에 디버그 모드일 때와 그렇지 않을 때에 대해서 임의의 좌표값을 입력해주어야 한다.
