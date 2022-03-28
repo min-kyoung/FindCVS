@@ -18,6 +18,8 @@ class LocationInformationViewController: UIViewController {
     let mapView = MTMapView()
     let currentLocationButton = UIButton() // 현재 위치를 표시해주는 버튼
     let detailList = UITableView()
+    
+    let detailListBackgroundView = DetailListBackgroundView()
     let viewModel = LocationInformationViewModel()
     
     override func viewDidLoad() {
@@ -32,6 +34,8 @@ class LocationInformationViewController: UIViewController {
     }
     
     private func bind(_ viewModel: LocationInformationViewModel) {
+        detailListBackgroundView.bind(viewModel.detailListBackgroundViewModel)
+        
         // 센터 포인트 값을 받았으니 해당하는 값으로 맵을 이동시키라고 명령을 주는 것
         viewModel.setMapCenter
             .emit(to: mapView.rx.setMapCenterPoint)
@@ -39,6 +43,32 @@ class LocationInformationViewController: UIViewController {
         
         viewModel.errorMessage
             .emit(to: self.rx.presentAlert)
+            .disposed(by: disposeBag)
+        
+        viewModel.detailListCellData
+            .drive(detailList.rx.items) { tv, row, data in
+                let cell = tv.dequeueReusableCell(withIdentifier: "DetailListCell", for: IndexPath(row: row, section: 0)) as! DetailListCell
+                
+                cell.setData(data)
+                
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
+        // 맵 뷰에서 핀을 뿌려줌 => 핀이 어디에 위치할지 정확한 위치를 알아야 함
+        viewModel.detailListCellData
+            .map { $0.compactMap { $0.point} } // detailListCellData는 DetailListCellData의 array인데, addPOItems는 바로 MTMapPoint를 받도록 했기 때문에 compactMap을 통해 point 값만 뽑아서 전달될 수 있게 함
+            .drive(self.rx.addPOItems)
+            .disposed(by: disposeBag)
+        
+        // SelectedLocation으로 스크롤을 했을 때, 어떠한 location이 selected 되었는지 리스트로 보여주어야 함
+        viewModel.scrollToSelectedLocation
+            .emit(to: self.rx.showSelectedLocation)
+            .disposed(by: disposeBag)
+        
+        detailList.rx.itemSelected
+            .map { $0.row } // row 값만 뽑음
+            .bind(to: viewModel.detailListItemSelected)
             .disposed(by: disposeBag)
         
         currentLocationButton.rx.tap
@@ -55,6 +85,10 @@ class LocationInformationViewController: UIViewController {
         currentLocationButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
         currentLocationButton.backgroundColor = .white
         currentLocationButton.layer.cornerRadius = 20
+        
+        detailList.register(DetailListCell.self, forCellReuseIdentifier: "DetailListCell")
+        detailList.separatorStyle = .none
+        detailList.backgroundView = detailListBackgroundView
     }
     
     private func layout() {
@@ -143,6 +177,33 @@ extension Reactive where Base: LocationInformationViewController {
             alertController.addAction(action)
             
             base.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    var showSelectedLocation: Binder<Int> {
+        return Binder(base) { base, row in
+            let indexPath = IndexPath(row: row, section: 0)
+            base.detailList.selectRow(at: indexPath, animated: true, scrollPosition: .top) // detailList가 해당 이벤트가 들어올 때마다 선택된 어떠한 리스트로 해당하는 것이 가장 위에 뜨게 자동으로 이동하게 해줄 것
+            // detailList는 UITableView에 있는 기본적인 메서드로, 어떠한 indexPath로 이동하라는 것만 알려주면  자동적으로 이동시켜줌
+        }
+    }
+    
+    var addPOItems: Binder<[MTMapPoint]> {
+        return Binder(base) { base, points in
+            let items = points
+                .enumerated()
+                .map { offset, point -> MTMapPOIItem in // enumerated를 통해 offset과 point로 나누어서 보여진 것을 MTMapPOIItem으로 만듦
+                    let mapPOItem = MTMapPOIItem()
+                    
+                    mapPOItem.mapPoint = point
+                    mapPOItem.markerType = .redPin
+                    mapPOItem.showAnimationType = .springFromGround
+                    mapPOItem.tag = offset // 고유한 tag를 가지도록 함
+                    
+                    return mapPOItem
+                }
+            base.mapView.removeAllPOIItems() // 새로운 이벤트를 받을 때마다 기존의 아이템은 다 지우고
+            base.mapView.addPOIItems(items) // 새로운 아이템을 추가함
         }
     }
 }
