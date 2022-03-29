@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A92BEF0C27F32B6B00EA9731 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF0B27F32B6B00EA9731 /* LocalAPI.swift */; };
+		A92BEF0F27F32CFB00EA9731 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */; };
+		A92BEF1127F333AC00EA9731 /* MapAPIInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */; };
+		A92BEF1327F3342C00EA9731 /* FindCVS++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF1227F3342C00EA9731 /* FindCVS++Bundle.swift */; };
 		A9448A4127F1D10100559FCD /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448A4027F1D10100559FCD /* DetailListCell.swift */; };
 		A9448A4327F1D2E900559FCD /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448A4227F1D2E900559FCD /* DetailListBackgroundView.swift */; };
 		A9448A4527F1D37700559FCD /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448A4427F1D37700559FCD /* DetailListBackgroundViewModel.swift */; };
@@ -64,6 +68,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A92BEF0B27F32B6B00EA9731 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MapAPIInfo.plist; sourceTree = "<group>"; };
+		A92BEF1227F3342C00EA9731 /* FindCVS++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FindCVS++Bundle.swift"; sourceTree = "<group>"; };
 		A9448A4027F1D10100559FCD /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
 		A9448A4227F1D2E900559FCD /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
 		A9448A4427F1D37700559FCD /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A92BEF0D27F32B7000EA9731 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A92BEF0B27F32B6B00EA9731 /* LocalAPI.swift */,
+				A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		A955463627EDED2900B202AD = {
 			isa = PBXGroup;
 			children = (
@@ -173,11 +190,14 @@
 				A955465927EDFC2F00B202AD /* BridgingHeader.h */,
 				A955464227EDED2900B202AD /* AppDelegate.swift */,
 				A955464427EDED2900B202AD /* SceneDelegate.swift */,
+				A92BEF1227F3342C00EA9731 /* FindCVS++Bundle.swift */,
+				A92BEF0D27F32B7000EA9731 /* Network */,
 				A993C85427F0A5D500E07FF8 /* Presentation */,
 				A95546AF27EE017B00B202AD /* Entities */,
 				A955464B27EDED2B00B202AD /* Assets.xcassets */,
 				A955464D27EDED2B00B202AD /* LaunchScreen.storyboard */,
 				A955465027EDED2B00B202AD /* Info.plist */,
+				A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */,
 			);
 			path = FindCVS;
 			sourceTree = "<group>";
@@ -373,6 +393,7 @@
 				A955469327EDFCFB00B202AD /* point_sprite.png in Resources */,
 				A955469B27EDFCFB00B202AD /* map_present_background_update.png in Resources */,
 				A955469727EDFCFB00B202AD /* map_present_direction.png in Resources */,
+				A92BEF1127F333AC00EA9731 /* MapAPIInfo.plist in Resources */,
 				A955469627EDFCFB00B202AD /* noimage256.png in Resources */,
 				A955468527EDFCFB00B202AD /* shadow_balloon.png in Resources */,
 				A955464C27EDED2B00B202AD /* Assets.xcassets in Resources */,
@@ -392,9 +413,12 @@
 				A95546AE27EE016F00B202AD /* LocationData.swift in Sources */,
 				A95546B127EE01C100B202AD /* KLDocument.swift in Sources */,
 				A993C85327F0A5CA00E07FF8 /* LocationInformationViewController.swift in Sources */,
+				A92BEF0F27F32CFB00EA9731 /* LocalNetwork.swift in Sources */,
 				A9951D2727F0ADE900A55009 /* MTMapViewError.swift in Sources */,
 				A9448A4127F1D10100559FCD /* DetailListCell.swift in Sources */,
+				A92BEF0C27F32B6B00EA9731 /* LocalAPI.swift in Sources */,
 				A9448A4527F1D37700559FCD /* DetailListBackgroundViewModel.swift in Sources */,
+				A92BEF1327F3342C00EA9731 /* FindCVS++Bundle.swift in Sources */,
 				A955464327EDED2900B202AD /* AppDelegate.swift in Sources */,
 				A95546B327EE054D00B202AD /* DetailListCellData.swift in Sources */,
 				A955464527EDED2900B202AD /* SceneDelegate.swift in Sources */,
