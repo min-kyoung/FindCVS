@@ -31,8 +31,8 @@ struct LocationInformationModel {
     
     // documentData를 MTMapPoint로 변환수는 함수
     func documentsToMTMapPoint(_ doc: KLDocument) -> MTMapPoint {
-        let latitude = Double(doc.x) ?? .zero // x값은 String으로 들어오기 때문에 Double로 변환
-        let longitude = Double(doc.y) ?? .zero
+        let latitude = Double(doc.y) ?? .zero // x값은 String으로 들어오기 때문에 Double로 변환
+        let longitude = Double(doc.x) ?? .zero
         return MTMapPoint(geoCoord: MTMapPointGeo(latitude: latitude, longitude: longitude))
     }
 }
