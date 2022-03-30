@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-class DetailListBackgroundViewModel {
+struct DetailListBackgroundViewModel {
     // viewModel -> view
     let isStatusLabelHidden: Signal<Bool>  // 만약 리스트에 가지고 온 데이터가 있다면 숨겨져야 하고, 아무런 데이터가 없다면 숨겨져야 한다.
     

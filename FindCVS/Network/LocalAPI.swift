@@ -20,7 +20,7 @@ struct LocalAPI {
         
         // 필수로 전달해주어야 하는 값들
         components.queryItems = [
-            URLQueryItem(name: "catgory_group_code", value: "CS2"),
+            URLQueryItem(name: "category_group_code", value: "CS2"),
             URLQueryItem(name: "x", value: "\(mapPoint.mapPointGeo().longitude)"),
             URLQueryItem(name: "y", value: "\(mapPoint.mapPointGeo().latitude)"),
             URLQueryItem(name: "radius", value: "500"), // 500m

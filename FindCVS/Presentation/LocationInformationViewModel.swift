@@ -30,16 +30,49 @@ struct LocationInformationViewModel {
 
     let detailListItemSelected = PublishRelay<Int>() // 리스트가 선택되었을 때 어떠한 row값이 전달되도록 함
     
-    let documentData = PublishSubject<[KLDocument?]>() // KLDocument의 리스트로 받음
+    private let documentData = PublishSubject<[KLDocument]>() // KLDocument의 리스트로 받음
     
-    init() {
-        // 지도 중심점 설정 (센터로 이동)
+    init(model: LocationInformationModel = LocationInformationModel()) {
+        // MARK: 네트워크 통신으로 데이터 불러오기
+        let cvsLocationDataResult = mapCenterPoint
+            .flatMapLatest(model.getLocation) // mapCenterPoint가 view에서 viewModel로 전달될 때마다 flatMapLatest로 받아서 API 통신을 함
+            .share()
         
+        let cvsLocationDataValue = cvsLocationDataResult
+            .compactMap { data -> LocationData? in // => compactMap을 통해 nil값을 없앰
+                guard case let .success(value) = data else {
+                    return nil
+                }
+                return value
+            } // => cvsLocationDataValue가 받는 값은 LocationData가 됨
+        
+        // cvsLocationDataResult는 LocationData 또느 URLError를 뱉도록 설계됨
+        // cvsLocationData가 value를 갖는다면 ErrorMessage도 붙을 것을 가정
+        let cvsLocationDataErrorMessage = cvsLocationDataResult
+            .compactMap { data -> String? in
+                switch data {
+                case let .success(data) where data.documents.isEmpty: // 성공이면서 document가 empty일 경우 = 성공이나 사실상 빈 값이 온 것
+                    return """
+                    500m 근처에 이용할 수 있는 편의점이 없습니다.
+                    지도 위치를 옮겨서 재검색해주세요.
+                    """
+                case let .failure(error):
+                    return error.localizedDescription
+                default: // succsee이지만 empty가 아닌 것 = 성공 => 에러 메세지 필요 없음
+                    return nil
+                }
+            }
+        
+        cvsLocationDataValue
+            .map { $0.documents }
+            .bind(to: documentData)
+            .disposed(by: disposeBag)
+        
+        // MARK: 지도 중심점 설정 (센터로 이동)
         let selectDetailListItem = detailListItemSelected
             .withLatestFrom(documentData) { $1[$0] } // 받아온 documentData 중에서 selected된 row에 해당하는 값을 뽑아냄
             .map { data -> MTMapPoint in // 데이터가 뽑아지면 MTMapPoint로 변혼
-                guard let data = data,
-                      let longtitue = Double(data.x), // 경도 값으로 변경
+                guard let longtitue = Double(data.x), // 경도 값으로 변경
                       let latituude = Double(data.y) // 위도 값으로 변경
                 else {
                     return MTMapPoint()
@@ -62,11 +95,21 @@ struct LocationInformationViewModel {
             .asSignal(onErrorSignalWith: .empty())
         
         // 에러 메세지 전달
-        errorMessage = mapViewError.asObservable()
+        errorMessage = Observable
+            .merge(
+                cvsLocationDataErrorMessage, // 네트워크에서 에러메세지가 발생했을 경우
+                mapViewError.asObservable()
+            )
             .asSignal(onErrorJustReturn: "잠시 후 다시 시도해주세요.")
         
-        // * API통신을 아직 하지 않았기 때문에 임의로 빈값을 전달할 수 있도록 함
-        detailListCellData = Driver.just([])
+        detailListCellData = documentData // documentData가 들어오기 시작하면
+            .map(model.documentsToCellData) // model에서 documentsToCellData 함수를 지나서
+            .asDriver(onErrorDriveWith: .empty()) // driver로 만들어줌
+        
+        documentData
+            .map { !$0.isEmpty } // 비어있지 않다면
+            .bind(to: detailListBackgroundViewModel.shouldHideStatusLabel) // 데이터에 따라 subview인 backgroundview까지 한번에 연결
+            .disposed(by: disposeBag)
         
         scrollToSelectedLocation = selectedPOIItem // 핀을 선택했을 때 발생하는 이벤트
             .map { $0.tag } // tag로 전환

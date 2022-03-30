@@ -11,6 +11,7 @@
 		A92BEF0F27F32CFB00EA9731 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */; };
 		A92BEF1127F333AC00EA9731 /* MapAPIInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */; };
 		A92BEF1327F3342C00EA9731 /* FindCVS++Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF1227F3342C00EA9731 /* FindCVS++Bundle.swift */; };
+		A92BEF1527F3391800EA9731 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF1427F3391800EA9731 /* LocationInformationModel.swift */; };
 		A9448A4127F1D10100559FCD /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448A4027F1D10100559FCD /* DetailListCell.swift */; };
 		A9448A4327F1D2E900559FCD /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448A4227F1D2E900559FCD /* DetailListBackgroundView.swift */; };
 		A9448A4527F1D37700559FCD /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9448A4427F1D37700559FCD /* DetailListBackgroundViewModel.swift */; };
@@ -56,13 +57,11 @@
 		A95546AE27EE016F00B202AD /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546AD27EE016F00B202AD /* LocationData.swift */; };
 		A95546B127EE01C100B202AD /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546B027EE01C100B202AD /* KLDocument.swift */; };
 		A95546B327EE054D00B202AD /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546B227EE054D00B202AD /* DetailListCellData.swift */; };
+		A95794AE27F46DB000E9324C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A95794AD27F46DB000E9324C /* RxCocoa */; };
+		A95794B027F46DB000E9324C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A95794AF27F46DB000E9324C /* RxRelay */; };
+		A95794B227F46DB000E9324C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A95794B127F46DB000E9324C /* RxSwift */; };
 		A993C85327F0A5CA00E07FF8 /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993C85227F0A5CA00E07FF8 /* LocationInformationViewController.swift */; };
 		A993C85627F0A60400E07FF8 /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993C85527F0A60400E07FF8 /* LocationInformationViewModel.swift */; };
-		A9951D1A27F0A70A00A55009 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D1927F0A70A00A55009 /* RxBlocking */; };
-		A9951D1C27F0A70A00A55009 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D1B27F0A70A00A55009 /* RxCocoa */; };
-		A9951D1E27F0A70A00A55009 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D1D27F0A70A00A55009 /* RxRelay */; };
-		A9951D2027F0A70A00A55009 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D1F27F0A70A00A55009 /* RxSwift */; };
-		A9951D2227F0A70A00A55009 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D2127F0A70A00A55009 /* RxTest */; };
 		A9951D2527F0A72400A55009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D2427F0A72400A55009 /* SnapKit */; };
 		A9951D2727F0ADE900A55009 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9951D2627F0ADE900A55009 /* MTMapViewError.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +71,7 @@
 		A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
 		A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MapAPIInfo.plist; sourceTree = "<group>"; };
 		A92BEF1227F3342C00EA9731 /* FindCVS++Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FindCVS++Bundle.swift"; sourceTree = "<group>"; };
+		A92BEF1427F3391800EA9731 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
 		A9448A4027F1D10100559FCD /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
 		A9448A4227F1D2E900559FCD /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
 		A9448A4427F1D37700559FCD /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
@@ -138,20 +138,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9951D2227F0A70A00A55009 /* RxTest in Frameworks */,
 				A95546AC27EDFD6E00B202AD /* libsqlite3.tbd in Frameworks */,
-				A9951D1A27F0A70A00A55009 /* RxBlocking in Frameworks */,
 				A9951D2527F0A72400A55009 /* SnapKit in Frameworks */,
-				A9951D1C27F0A70A00A55009 /* RxCocoa in Frameworks */,
+				A95794AE27F46DB000E9324C /* RxCocoa in Frameworks */,
 				A95546AA27EDFD5F00B202AD /* libxml2.tbd in Frameworks */,
 				A95546A827EDFD5200B202AD /* libc++.tbd in Frameworks */,
 				A95546A627EDFD4900B202AD /* QuartzCore.framework in Frameworks */,
-				A9951D2027F0A70A00A55009 /* RxSwift in Frameworks */,
+				A95794B227F46DB000E9324C /* RxSwift in Frameworks */,
+				A95794B027F46DB000E9324C /* RxRelay in Frameworks */,
 				A95546A427EDFD3F00B202AD /* CoreLocation.framework in Frameworks */,
 				A95546A227EDFD3300B202AD /* SystemConfiguration.framework in Frameworks */,
 				A95546A027EDFD2B00B202AD /* OpenGLES.framework in Frameworks */,
 				A955469E27EDFCFB00B202AD /* DaumMap.framework in Frameworks */,
-				A9951D1E27F0A70A00A55009 /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +290,7 @@
 			children = (
 				A993C85227F0A5CA00E07FF8 /* LocationInformationViewController.swift */,
 				A993C85527F0A60400E07FF8 /* LocationInformationViewModel.swift */,
+				A92BEF1427F3391800EA9731 /* LocationInformationModel.swift */,
 				A9448A4027F1D10100559FCD /* DetailListCell.swift */,
 				A9448A4227F1D2E900559FCD /* DetailListBackgroundView.swift */,
 				A9448A4427F1D37700559FCD /* DetailListBackgroundViewModel.swift */,
@@ -316,12 +315,10 @@
 			);
 			name = FindCVS;
 			packageProductDependencies = (
-				A9951D1927F0A70A00A55009 /* RxBlocking */,
-				A9951D1B27F0A70A00A55009 /* RxCocoa */,
-				A9951D1D27F0A70A00A55009 /* RxRelay */,
-				A9951D1F27F0A70A00A55009 /* RxSwift */,
-				A9951D2127F0A70A00A55009 /* RxTest */,
 				A9951D2427F0A72400A55009 /* SnapKit */,
+				A95794AD27F46DB000E9324C /* RxCocoa */,
+				A95794AF27F46DB000E9324C /* RxRelay */,
+				A95794B127F46DB000E9324C /* RxSwift */,
 			);
 			productName = FindCVS;
 			productReference = A955463F27EDED2900B202AD /* FindCVS.app */;
@@ -352,8 +349,8 @@
 			);
 			mainGroup = A955463627EDED2900B202AD;
 			packageReferences = (
-				A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A9951D2327F0A72400A55009 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = A955464027EDED2900B202AD /* Products */;
 			projectDirPath = "";
@@ -411,6 +408,7 @@
 			files = (
 				A9448A4327F1D2E900559FCD /* DetailListBackgroundView.swift in Sources */,
 				A95546AE27EE016F00B202AD /* LocationData.swift in Sources */,
+				A92BEF1527F3391800EA9731 /* LocationInformationModel.swift in Sources */,
 				A95546B127EE01C100B202AD /* KLDocument.swift in Sources */,
 				A993C85327F0A5CA00E07FF8 /* LocationInformationViewController.swift in Sources */,
 				A92BEF0F27F32CFB00EA9731 /* LocalNetwork.swift in Sources */,
@@ -477,6 +475,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -491,7 +490,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -538,6 +539,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -546,7 +548,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -572,7 +576,6 @@
 				INFOPLIST_FILE = FindCVS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -605,7 +608,6 @@
 				INFOPLIST_FILE = FindCVS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -646,7 +648,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -665,30 +667,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A9951D1927F0A70A00A55009 /* RxBlocking */ = {
+		A95794AD27F46DB000E9324C /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		A9951D1B27F0A70A00A55009 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		A9951D1D27F0A70A00A55009 /* RxRelay */ = {
+		A95794AF27F46DB000E9324C /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		A9951D1F27F0A70A00A55009 /* RxSwift */ = {
+		A95794B127F46DB000E9324C /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		A9951D2127F0A70A00A55009 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A9951D1827F0A70A00A55009 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 		A9951D2427F0A72400A55009 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
