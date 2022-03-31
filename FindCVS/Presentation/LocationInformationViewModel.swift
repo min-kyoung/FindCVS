@@ -71,15 +71,7 @@ struct LocationInformationViewModel {
         // MARK: 지도 중심점 설정 (센터로 이동)
         let selectDetailListItem = detailListItemSelected
             .withLatestFrom(documentData) { $1[$0] } // 받아온 documentData 중에서 selected된 row에 해당하는 값을 뽑아냄
-            .map { data -> MTMapPoint in // 데이터가 뽑아지면 MTMapPoint로 변혼
-                guard let longtitue = Double(data.x), // 경도 값으로 변경
-                      let latituude = Double(data.y) // 위도 값으로 변경
-                else {
-                    return MTMapPoint()
-                }
-                let geoCord = MTMapPointGeo(latitude: latituude, longitude: longtitue)
-                return MTMapPoint(geoCoord: geoCord) // 정확한 포인트 값으로 변환
-            }
+            .map(model.documentsToMTMapPoint)
         
         let moveToCurrentLocation = currentLocationButtonTapped
             .withLatestFrom(currentLocation) // currentLocation을 한 번이라도 받은 이후
