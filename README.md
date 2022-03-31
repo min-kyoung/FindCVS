@@ -60,3 +60,54 @@
    * 외부에서 전달받을 값에 따라 숨김 여부를 정한다.
 > Entities
  * API로 response 받으면, 받은 json으로 전달된 데이터를 사용할 수 있도록 Entity로 만든다.
+
+<hr>
+
+## Unit Test
+**Swift Packager로 테스트를 진행할 경우 버그가 발생할 가능성이 있기 때문에 Swift Package를 삭제한 후 Cocoapod으로 설정한다. <br> (Pod 파일 생성 후 아래와 같이 추가)**
+  ```swift
+  # Pods for FindCVS
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'SnapKit'
+
+  target 'FindCVSTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Stubber'
+    pod 'Nimble'
+    pod 'RxBlocking'
+    pod 'RxTest'
+  end
+  ``` 
+* 소스코드의 특정 모듈이 개발자가 의도한대로 작동하는지 검증하는 것을 말한다.
+* 앱 하나를 통째로 테스트 하는 것이 아니라 각각 작성한 메소드, 클래스 등의 단위로 테스트 케이스를 만들어 검증한다.
+#### XCTest
+* Xcode 프로젝트에 대한 단위 테스트, 성능 테스트, UI 테스트 등을 만들고 실행할 수 있게 하는 framework이다.
+* 테스트 대상에 테스트 케이스와 테스트 메서드를 추가해서 코드가 예상대로 잘 작동하는지 확인
+* XCTestCase를 상속하는 클래스를 통해 프로젝트 내에서 생성한 모델이나, 그 모델 내의 메소드들을 테스트한다.
+  * 테스트 케이스, 테스트 방법, 성능 테스트 등을 정의하기 위한 기본 클래스이며, 이 클래스를 통해서 테스트를 실행하기 전에 초기 상태를 준비하고 테스트가 완료된 후에 정리까지 수행할 수 있게 된다.  
+  * 대표적으로 setUp과  tearDown 메소드로 제어할 수 있다. <br>
+    * setUp() : 테스트 케이스가 시작되기 전에 초기상태를 사용자 정의할 수 있는 기회를 제공한다.
+    * tearDown() : 테스트 케이스 종료 후에 정리를 할 수 있는 기회를 제공한다.
+    ```swift
+    class func setUp()
+    class func tearDown()
+    ```
+#### Nimble 
+* XCTest framework보다 좀 더 편리하고 객관적으로 표현해주는 오픈 소스 framework이다.
+* Nimble의 가장 큰 장점은 읽기 쉽다는 것이다.
+
+#### RxTest
+* Observable에 가상의 시간 개념을 주입해서 Rx코드를 테스트하는 방법이다.
+	 * 시간 개념을 주입해서 언제, 무엇이 나왔는지 검증할 수 있다.
+* 임의의 Observer을 통해 가상의 시간이 다 흐를 때까지 관찰한 후에 타이밍과 이벤트를 반환할 수 있다.
+* 해당하는 시점에 해당하는 이벤트가 발생하는지 검증할 수 있다.
+* 대표적으로 createHotObservable과 createColdObservable 메소드가 있다.
+  * createHotObservable() : 구독의 여부와 관계없이 이벤트가 발생된다.
+  * createColdObservable() : 구독이 시작되어야만 정해진 순서대로 이벤트가 발생될 수 있다.
+
+#### RxBlocking
+* Observable의 이벤트 방출을 검증하고, 특정 시간동안 방출된 이벤트를 검증하는 방식이다.
+* Observable에서 방출된 이벤트를 단순한 Array 값으로 전환할 수 있다.
+
