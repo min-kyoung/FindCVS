@@ -62,6 +62,7 @@
 		A981A32527F5CEC000BE8C57 /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = A981A32427F5CEC000BE8C57 /* networkDummy.json */; };
 		A981A32727F5CFF400BE8C57 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A32627F5CFF400BE8C57 /* Dummy.swift */; };
 		A981A32C27F5D23000BE8C57 /* LocationInformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A32B27F5D23000BE8C57 /* LocationInformationModelTests.swift */; };
+		A981A33027F5DDC600BE8C57 /* LocationInformationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A32F27F5DDC600BE8C57 /* LocationInformationViewModelTests.swift */; };
 		A993C85327F0A5CA00E07FF8 /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993C85227F0A5CA00E07FF8 /* LocationInformationViewController.swift */; };
 		A993C85627F0A60400E07FF8 /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993C85527F0A60400E07FF8 /* LocationInformationViewModel.swift */; };
 		A9951D2727F0ADE900A55009 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9951D2627F0ADE900A55009 /* MTMapViewError.swift */; };
@@ -149,6 +150,7 @@
 		A981A32427F5CEC000BE8C57 /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
 		A981A32627F5CFF400BE8C57 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		A981A32B27F5D23000BE8C57 /* LocationInformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTests.swift; sourceTree = "<group>"; };
+		A981A32F27F5DDC600BE8C57 /* LocationInformationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModelTests.swift; sourceTree = "<group>"; };
 		A993C85227F0A5CA00E07FF8 /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
 		A993C85527F0A60400E07FF8 /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
 		A9951D2627F0ADE900A55009 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				A981A32627F5CFF400BE8C57 /* Dummy.swift */,
 				A981A32B27F5D23000BE8C57 /* LocationInformationModelTests.swift */,
 				A981A32427F5CEC000BE8C57 /* networkDummy.json */,
+				A981A32F27F5DDC600BE8C57 /* LocationInformationViewModelTests.swift */,
 			);
 			path = FindCVSTests;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A981A33027F5DDC600BE8C57 /* LocationInformationViewModelTests.swift in Sources */,
 				A981A32727F5CFF400BE8C57 /* Dummy.swift in Sources */,
 				A981A32327F5CB8D00BE8C57 /* LocalNetworkStub.swift in Sources */,
 				A981A32C27F5D23000BE8C57 /* LocationInformationModelTests.swift in Sources */,
