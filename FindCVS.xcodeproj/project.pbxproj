@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77F7A594CC2C744D16286E56 /* Pods_FindCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95256CE8D99FC144890EB95 /* Pods_FindCVS.framework */; };
 		A92BEF0C27F32B6B00EA9731 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF0B27F32B6B00EA9731 /* LocalAPI.swift */; };
 		A92BEF0F27F32CFB00EA9731 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */; };
 		A92BEF1127F333AC00EA9731 /* MapAPIInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */; };
@@ -57,16 +58,31 @@
 		A95546AE27EE016F00B202AD /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546AD27EE016F00B202AD /* LocationData.swift */; };
 		A95546B127EE01C100B202AD /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546B027EE01C100B202AD /* KLDocument.swift */; };
 		A95546B327EE054D00B202AD /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95546B227EE054D00B202AD /* DetailListCellData.swift */; };
-		A95794AE27F46DB000E9324C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A95794AD27F46DB000E9324C /* RxCocoa */; };
-		A95794B027F46DB000E9324C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A95794AF27F46DB000E9324C /* RxRelay */; };
-		A95794B227F46DB000E9324C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A95794B127F46DB000E9324C /* RxSwift */; };
+		A981A32327F5CB8D00BE8C57 /* LocalNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A32227F5CB8D00BE8C57 /* LocalNetworkStub.swift */; };
+		A981A32527F5CEC000BE8C57 /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = A981A32427F5CEC000BE8C57 /* networkDummy.json */; };
+		A981A32727F5CFF400BE8C57 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A32627F5CFF400BE8C57 /* Dummy.swift */; };
+		A981A32C27F5D23000BE8C57 /* LocationInformationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981A32B27F5D23000BE8C57 /* LocationInformationModelTests.swift */; };
 		A993C85327F0A5CA00E07FF8 /* LocationInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993C85227F0A5CA00E07FF8 /* LocationInformationViewController.swift */; };
 		A993C85627F0A60400E07FF8 /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A993C85527F0A60400E07FF8 /* LocationInformationViewModel.swift */; };
-		A9951D2527F0A72400A55009 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A9951D2427F0A72400A55009 /* SnapKit */; };
 		A9951D2727F0ADE900A55009 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9951D2627F0ADE900A55009 /* MTMapViewError.swift */; };
+		EE03AECC7EAA01D5FE0DD7E5 /* Pods_FindCVSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929ED67E5FD60D55C5074607 /* Pods_FindCVSTests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A981A31D27F5CB3F00BE8C57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A955463727EDED2900B202AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A955463E27EDED2900B202AD;
+			remoteInfo = FindCVS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1E6B42D3C4E314994C42D8D0 /* Pods-FindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.debug.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.debug.xcconfig"; sourceTree = "<group>"; };
+		582CBEA8E21BCDE97785844D /* Pods-FindCVSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVSTests.debug.xcconfig"; path = "Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7771BD4BE8F201535D193EA5 /* Pods-FindCVSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVSTests.release.xcconfig"; path = "Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests.release.xcconfig"; sourceTree = "<group>"; };
+		929ED67E5FD60D55C5074607 /* Pods_FindCVSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92BEF0B27F32B6B00EA9731 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
 		A92BEF0E27F32CFB00EA9731 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
 		A92BEF1027F333AC00EA9731 /* MapAPIInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MapAPIInfo.plist; sourceTree = "<group>"; };
@@ -128,9 +144,16 @@
 		A95546AD27EE016F00B202AD /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		A95546B027EE01C100B202AD /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		A95546B227EE054D00B202AD /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
+		A981A31927F5CB3F00BE8C57 /* FindCVSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindCVSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A981A32227F5CB8D00BE8C57 /* LocalNetworkStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkStub.swift; sourceTree = "<group>"; };
+		A981A32427F5CEC000BE8C57 /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
+		A981A32627F5CFF400BE8C57 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
+		A981A32B27F5D23000BE8C57 /* LocationInformationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModelTests.swift; sourceTree = "<group>"; };
 		A993C85227F0A5CA00E07FF8 /* LocationInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewController.swift; sourceTree = "<group>"; };
 		A993C85527F0A60400E07FF8 /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
 		A9951D2627F0ADE900A55009 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		C49C52686546F9E34E5E76A6 /* Pods-FindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.release.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.release.xcconfig"; sourceTree = "<group>"; };
+		E95256CE8D99FC144890EB95 /* Pods_FindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,23 +162,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95546AC27EDFD6E00B202AD /* libsqlite3.tbd in Frameworks */,
-				A9951D2527F0A72400A55009 /* SnapKit in Frameworks */,
-				A95794AE27F46DB000E9324C /* RxCocoa in Frameworks */,
 				A95546AA27EDFD5F00B202AD /* libxml2.tbd in Frameworks */,
 				A95546A827EDFD5200B202AD /* libc++.tbd in Frameworks */,
 				A95546A627EDFD4900B202AD /* QuartzCore.framework in Frameworks */,
-				A95794B227F46DB000E9324C /* RxSwift in Frameworks */,
-				A95794B027F46DB000E9324C /* RxRelay in Frameworks */,
 				A95546A427EDFD3F00B202AD /* CoreLocation.framework in Frameworks */,
 				A95546A227EDFD3300B202AD /* SystemConfiguration.framework in Frameworks */,
 				A95546A027EDFD2B00B202AD /* OpenGLES.framework in Frameworks */,
 				A955469E27EDFCFB00B202AD /* DaumMap.framework in Frameworks */,
+				77F7A594CC2C744D16286E56 /* Pods_FindCVS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A981A31627F5CB3F00BE8C57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE03AECC7EAA01D5FE0DD7E5 /* Pods_FindCVSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		933FB76D410DBF36229F502F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E6B42D3C4E314994C42D8D0 /* Pods-FindCVS.debug.xcconfig */,
+				C49C52686546F9E34E5E76A6 /* Pods-FindCVS.release.xcconfig */,
+				582CBEA8E21BCDE97785844D /* Pods-FindCVSTests.debug.xcconfig */,
+				7771BD4BE8F201535D193EA5 /* Pods-FindCVSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A92BEF0D27F32B7000EA9731 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,8 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				A955464127EDED2900B202AD /* FindCVS */,
+				A981A31A27F5CB3F00BE8C57 /* FindCVSTests */,
 				A955464027EDED2900B202AD /* Products */,
 				A955465A27EDFCAC00B202AD /* Frameworks */,
+				933FB76D410DBF36229F502F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				A955463F27EDED2900B202AD /* FindCVS.app */,
+				A981A31927F5CB3F00BE8C57 /* FindCVSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +253,8 @@
 				A95546A127EDFD3300B202AD /* SystemConfiguration.framework */,
 				A955469F27EDFD2B00B202AD /* OpenGLES.framework */,
 				A955465C27EDFCFB00B202AD /* DaumMap.embeddedframework */,
+				E95256CE8D99FC144890EB95 /* Pods_FindCVS.framework */,
+				929ED67E5FD60D55C5074607 /* Pods_FindCVSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -285,6 +329,17 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		A981A31A27F5CB3F00BE8C57 /* FindCVSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A981A32227F5CB8D00BE8C57 /* LocalNetworkStub.swift */,
+				A981A32627F5CFF400BE8C57 /* Dummy.swift */,
+				A981A32B27F5D23000BE8C57 /* LocationInformationModelTests.swift */,
+				A981A32427F5CEC000BE8C57 /* networkDummy.json */,
+			);
+			path = FindCVSTests;
+			sourceTree = "<group>";
+		};
 		A993C85427F0A5D500E07FF8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,24 +360,40 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A955465327EDED2B00B202AD /* Build configuration list for PBXNativeTarget "FindCVS" */;
 			buildPhases = (
+				53783CCB68A8B73EE813A535 /* [CP] Check Pods Manifest.lock */,
 				A955463B27EDED2900B202AD /* Sources */,
 				A955463C27EDED2900B202AD /* Frameworks */,
 				A955463D27EDED2900B202AD /* Resources */,
+				E5BAEB915CA5D265B3D416B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FindCVS;
-			packageProductDependencies = (
-				A9951D2427F0A72400A55009 /* SnapKit */,
-				A95794AD27F46DB000E9324C /* RxCocoa */,
-				A95794AF27F46DB000E9324C /* RxRelay */,
-				A95794B127F46DB000E9324C /* RxSwift */,
-			);
 			productName = FindCVS;
 			productReference = A955463F27EDED2900B202AD /* FindCVS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A981A31827F5CB3F00BE8C57 /* FindCVSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A981A32127F5CB3F00BE8C57 /* Build configuration list for PBXNativeTarget "FindCVSTests" */;
+			buildPhases = (
+				2159E2F6F9D4DE7A8C424606 /* [CP] Check Pods Manifest.lock */,
+				A981A31527F5CB3F00BE8C57 /* Sources */,
+				A981A31627F5CB3F00BE8C57 /* Frameworks */,
+				A981A31727F5CB3F00BE8C57 /* Resources */,
+				1A212F1E2EE1F4E6ED1A97F9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A981A31E27F5CB3F00BE8C57 /* PBXTargetDependency */,
+			);
+			name = FindCVSTests;
+			productName = FindCVSTests;
+			productReference = A981A31927F5CB3F00BE8C57 /* FindCVSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -337,6 +408,11 @@
 					A955463E27EDED2900B202AD = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					A981A31827F5CB3F00BE8C57 = {
+						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
+						TestTargetID = A955463E27EDED2900B202AD;
+					};
 				};
 			};
 			buildConfigurationList = A955463A27EDED2900B202AD /* Build configuration list for PBXProject "FindCVS" */;
@@ -348,15 +424,12 @@
 				Base,
 			);
 			mainGroup = A955463627EDED2900B202AD;
-			packageReferences = (
-				A9951D2327F0A72400A55009 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */,
-			);
 			productRefGroup = A955464027EDED2900B202AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A955463E27EDED2900B202AD /* FindCVS */,
+				A981A31827F5CB3F00BE8C57 /* FindCVSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -399,7 +472,96 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A981A31727F5CB3F00BE8C57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A981A32527F5CEC000BE8C57 /* networkDummy.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A212F1E2EE1F4E6ED1A97F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVSTests/Pods-FindCVSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2159E2F6F9D4DE7A8C424606 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53783CCB68A8B73EE813A535 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5BAEB915CA5D265B3D416B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A955463B27EDED2900B202AD /* Sources */ = {
@@ -424,7 +586,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A981A31527F5CB3F00BE8C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A981A32727F5CFF400BE8C57 /* Dummy.swift in Sources */,
+				A981A32327F5CB8D00BE8C57 /* LocalNetworkStub.swift in Sources */,
+				A981A32C27F5D23000BE8C57 /* LocationInformationModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A981A31E27F5CB3F00BE8C57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A955463E27EDED2900B202AD /* FindCVS */;
+			targetProxy = A981A31D27F5CB3F00BE8C57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A955464D27EDED2B00B202AD /* LaunchScreen.storyboard */ = {
@@ -562,6 +742,7 @@
 		};
 		A955465427EDED2B00B202AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E6B42D3C4E314994C42D8D0 /* Pods-FindCVS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -594,6 +775,7 @@
 		};
 		A955465527EDED2B00B202AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C49C52686546F9E34E5E76A6 /* Pods-FindCVS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -624,6 +806,59 @@
 			};
 			name = Release;
 		};
+		A981A31F27F5CB3F00BE8C57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 582CBEA8E21BCDE97785844D /* Pods-FindCVSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YB3R3CK6WP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "min-kyoung.FindCVSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindCVS.app/FindCVS";
+			};
+			name = Debug;
+		};
+		A981A32027F5CB3F00BE8C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7771BD4BE8F201535D193EA5 /* Pods-FindCVSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YB3R3CK6WP;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "min-kyoung.FindCVSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindCVS.app/FindCVS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -645,49 +880,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A981A32127F5CB3F00BE8C57 /* Build configuration list for PBXNativeTarget "FindCVSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A981A31F27F5CB3F00BE8C57 /* Debug */,
+				A981A32027F5CB3F00BE8C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = exactVersion;
-				version = 6.5.0;
-			};
-		};
-		A9951D2327F0A72400A55009 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = exactVersion;
-				version = 5.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A95794AD27F46DB000E9324C /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A95794AF27F46DB000E9324C /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		A95794B127F46DB000E9324C /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A95794AA27F46DB000E9324C /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		A9951D2427F0A72400A55009 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A9951D2327F0A72400A55009 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A955463727EDED2900B202AD /* Project object */;
 }
